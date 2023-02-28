@@ -10,14 +10,22 @@ body {
     background-color:  hsl(210, 46%, 95%);
 }
 
+.main {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .container {
-    display: grid;
+    display: grid !important;
     grid-template-areas: "denial denial jonathan kira"
                          "jeanete patrik patrik kira" 
     ;
     width: 1200px;
     height: 560px;
-    margin: 20vh auto;
+    margin-bottom: 1em;
     gap: 1.5rem;
 }
 
