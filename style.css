@@ -1,0 +1,116 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color:  hsl(210, 46%, 95%);
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "denial denial jonathan kira"
+                         "jeanete patrik patrik kira" 
+    ;
+    width: 1200px;
+    height: 560px;
+    margin: 10vh auto;
+    gap: 1.5rem;
+}
+
+section {
+    padding: 2em;
+    color: hsl(0, 0%, 100%);
+    border-radius: .6rem;
+}
+
+.person {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1em;
+}
+.person img {
+    border-radius: 50%;
+}
+
+h3 {
+    color: hsl(0, 0%, 81%);
+}
+h4 {
+    color: hsla(0, 0%, 81%, 0.5);
+}
+
+.bold {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.denial { grid-area: denial; }
+
+.jonathan { grid-area: jonathan; }
+
+.kira { grid-area: kira; }
+
+.jeanete { grid-area: jeanete; }
+
+.patrik { grid-area: patrik; }
+
+
+.jeanete, .kira {
+    background-color: hsl(0, 0%, 100%) !important;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.jeanete h3, .kira h3 {
+    color:black;
+}
+.jeanete h4, .kira h4 {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.denial {
+    background-color: hsl(263, 55%, 52%);
+}
+.jonathan {
+    background-color: hsl(217, 19%, 35%);
+}
+.patrik {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.light {
+    opacity: .7;
+}
+
+.jeanete, .kira, .jonathan {
+    width: 20em;
+}
+
+/* Smaller Screens */
+
+@media only screen and (max-device-width: 812px)  {
+    .container {
+        display: grid;
+        grid-template-areas: 
+          'denial'
+          'jonathan'
+          'jeanete'
+          'jeanete'
+          'patrik'
+          'kira';
+        
+        width: 90%;
+        height: auto;
+        margin: 1rem auto;
+    }
+
+    .jeanete, .kira, .jonathan {
+        width: auto;
+    }
+}
